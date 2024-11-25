@@ -1,0 +1,64 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <title>3D Cube with Images</title>
+    <style>
+        /* Container to give perspective to the 3D animation */
+        .scene {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            perspective: 100px; /* Perspective to enhance the 3D effect */
+            background-color: #f0f0f0;
+        }
+
+        /* Cube container for 3D transformation */
+        .cube {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            transform-style: preserve-3d; /* Maintain 3D transformation */
+            transform: rotateX(-30deg) rotateY(30deg); /* Initial position */
+            animation: rotateCube 5s infinite linear; /* Animation for the 3D cube */
+        }
+
+        /* Style for each face of the cube */
+        .face {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-size: cover; /* Ensure the image covers the entire face */
+            background-position: center; /* Center the image */
+            border: 1px solid #fff;
+        }
+
+        /* Positioning each face of the cube with your images */
+        .front  { transform: translateZ(75px); background-image: url('9-7-24.jpg'); }
+        .back   { transform: rotateY(180deg) translateZ(75px); background-image: url('9-7-24.jpg'); }
+        .right  { transform: rotateY(90deg) translateZ(75px); background-image: url('9-7-24.jpg'); }
+        .left   { transform: rotateY(-90deg) translateZ(75px); background-image: url('9-7-24.jpg'); }
+        .top    { transform: rotateX(90deg) translateZ(75px); background-image: url('9-7-24.jpg'); }
+        .bottom { transform: rotateX(-90deg) translateZ(75px); background-image: url('9-7-24.jpg'); }
+
+        /* Keyframes for rotating the cube in 3D space */
+        @keyframes rotateCube {
+            0%   { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </div>
+</body>
+</html>

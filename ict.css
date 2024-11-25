@@ -1,0 +1,28 @@
+.ict-logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ict-logo img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ict-info {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ict-info .mission {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.ict-info .glow {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
